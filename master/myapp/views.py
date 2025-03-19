@@ -13,7 +13,7 @@ from django.core.files.base import ContentFile
 
 
 class RegisterView(APIView):
-    permission_classes = [IsAuthenticated]
+  #  permission_classes = [IsAuthenticated]
     def post(self, request):
         # check if email or username already exists
         if AuthUser.objects.filter(email=request.data['email']).exists():

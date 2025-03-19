@@ -8,6 +8,14 @@ class Role(models.Model):
     def __str__(self):
         return self.name
 
+
+# INSERT INTO myapp_role (name) VALUES 
+#     ('Admin'),
+#     ('Yard Manager'),
+#     ('Driver'),
+#     ('Booking Team');
+
+
 class Profile(models.Model):
     user = models.OneToOneField(AuthUser, on_delete=models.CASCADE, related_name='profile')
     name = models.CharField(max_length=100)

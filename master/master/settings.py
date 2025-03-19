@@ -119,18 +119,33 @@ SIMPLE_JWT = {
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'rodez',  # Replace with your actual database name
+#         'USER': 'root',  # Database user
+#         'PASSWORD': 'BEmHYszZOCwosOOWjiroTafhigXYYTUz',  # Database password
+#         'HOST': 'monorail.proxy.rlwy.net',  # Host
+#         'PORT': '20323',  # Port number
+#         'OPTIONS': {
+#             'ssl': {
+#                 'ssl-mode': 'REQUIRED'
+#             }
+#         },
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rodez',  # Replace with your actual database name
-        'USER': 'root',  # Database user
-        'PASSWORD': 'BEmHYszZOCwosOOWjiroTafhigXYYTUz',  # Database password
-        'HOST': 'monorail.proxy.rlwy.net',  # Host
-        'PORT': '20323',  # Port number
+        'NAME': 'roadz',  
+        'USER': 'admin',  # RDS username
+        'PASSWORD': 'admin123',  # RDS password
+        'HOST':  'database-1.cx4ia644g9ja.ap-south-1.rds.amazonaws.com',  # AWS RDS endpoint
+        'PORT': '3306',  # Default MySQL port (3306)
         'OPTIONS': {
-            'ssl': {
-                'ssl-mode': 'REQUIRED'
-            }
+            'ssl': {'ssl-mode': 'REQUIRED'}  # Use SSL if required by AWS
         },
     }
 }
